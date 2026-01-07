@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Langara Swing Schedule Exporter",
+  "version": "1.0.0",
+  "description": "Export your Langara course schedule from Swing to ICS calendar format",
+  "permissions": [
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://swing.langara.bc.ca/*",
+    "https://langara.ca/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://swing.langara.bc.ca/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
+
